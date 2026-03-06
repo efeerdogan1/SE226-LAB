@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/efeerdogan/Documents/GitHub/SE226-LAB/lab2/cpp/output/lab2'
+relocations:     []
+...

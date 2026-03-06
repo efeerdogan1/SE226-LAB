@@ -1,12 +1,13 @@
 #include <iostream>
-
 using namespace std;
 
 int main(){
+
+    // Task 1 – Digital Root Sequence
     int num;
     int steps = 0;
 
-    cout << "Give me a number greater than 9: ";
+    cout << "Enter a number greater than 9: ";
     cin >> num;
 
     cout << num;
@@ -26,10 +27,11 @@ int main(){
     }
 
     cout << endl;
-    cout << "Final Value " << num << endl;
-    cout << "Total Steps " << steps << endl;
+    cout << "Final value: " << num << endl;
+    cout << "Total steps: " << steps << endl;
 
-    // Task 2
+
+    // Task 2 – FizzBuzz Counter
     int userInN = 0;
 
     while(userInN < 10 || userInN > 100){
@@ -41,28 +43,32 @@ int main(){
     int BuzzCounter = 0;
     int FizzBuzz = 0;
 
-    if(userInN % 3 == 0 && userInN % 5 == 0){
-        cout << "FizzBuzz" << endl;
-        FizzBuzz++;
-    }
-    else if(userInN % 7 == 0){
-        // pass (do nothing)
-    }
-    else if(userInN % 3 == 0){
-        cout << "Fizz" << endl;
-        FizzCounter++;
-    }
-    else if(userInN % 5 == 0){
-        cout << "Buzz" << endl;
-        BuzzCounter++;
-    }
-    else{
-        cout << userInN << endl;
+    for(int i = 1; i <= userInN; i++){
+
+        if(i % 7 == 0){
+            continue;
+        }
+
+        if(i % 3 == 0 && i % 5 == 0){
+            cout << "FizzBuzz" << endl;
+            FizzBuzz++;
+        }
+        else if(i % 3 == 0){
+            cout << "Fizz" << endl;
+            FizzCounter++;
+        }
+        else if(i % 5 == 0){
+            cout << "Buzz" << endl;
+            BuzzCounter++;
+        }
+        else{
+            cout << i << endl;
+        }
     }
 
     cout << "Summary : Fizz Counter " << FizzCounter
-        << " , Buzz Counter " << BuzzCounter
-        << " , FizzBuzz Counter " << FizzBuzz << endl;
+         << " , Buzz Counter " << BuzzCounter
+         << " , FizzBuzz Counter " << FizzBuzz << endl;
 
 
     // Task 3
@@ -86,5 +92,6 @@ int main(){
         }
         cout << endl;
     }
-        return 0;
+
+    return 0;
 }
